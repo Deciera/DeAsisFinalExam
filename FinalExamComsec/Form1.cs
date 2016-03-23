@@ -25,18 +25,18 @@ namespace FinalExamComsec
         private void writekey(string key , object value)
         {
             RegistryKey rk = Registry.CurrentUser;
-            RegistryKey sk1 = rk.CreateSubKey("SOFTWARE\\Urquia");
+            RegistryKey sk1 = rk.CreateSubKey("SOFTWARE\\DeAsis");
             sk1.SetValue(key,value);
 
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            writekey("MyFullname","John Benedict Urquia");          
+            writekey("MyFullname","Benedict De Asis");          
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            writekey("MyFullname", Encrypt.EncryptString("John Benedict Urquia"));          
+            writekey("MyFullname", Encrypt.EncryptString("Benedict De Asis"));          
         }
     }
 }
